@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-emphasis: none;
+}
+
+.container {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.tabs img {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    animation: img 1.5s alternate;
+}
+@keyframes img {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tabs input {
+    display: none;
+}
+
+#ku:checked ~ .fu,
+#ku:checked ~ .kr,
+#ku:checked ~ .shorts,
+#ku:checked ~ .kp{
+    /*display: none;*/
+    opacity: .3%;
+    transition: .4s ;
+}
+#fu:checked ~ .ku,
+#fu:checked ~ .kr,
+#fu:checked ~ .shorts,
+#fu:checked ~ .kp{
+    /*display: none;*/
+    opacity: .3%;
+    transition: .4s ;
+}
+#kr:checked ~ .ku,
+#kr:checked ~ .fu,
+#kr:checked ~ .shorts,
+#kr:checked ~ .kp{
+    /*display: none;*/
+    opacity: .3%;
+    transition: .4s ;
+}
+#shorts:checked ~ .ku,
+#shorts:checked ~ .fu,
+#shorts:checked ~ .kr,
+#shorts:checked ~ .kp{
+    /*display: none;*/
+    opacity: .3%;
+    transition: .4s ;
+}
+#kp:checked ~ .ku,
+#kp:checked ~ .fu,
+#kp:checked ~ .kr,
+#kp:checked ~ .shorts{
+    /*display: none;*/
+    opacity: .3%;
+    transition: .4s ;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 95px 0;
+}
+.group label{
+    padding: 10px 30px;
+    background: darkgray;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid darkgray;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: 4s;
+    animation: ani 1s alternate;
+}
+@keyframes ani {
+    0%{
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.group label:hover{
+    background: darkgray;
+    color: black;
+    transform: scale(1.1);
+}
+.tabs{
+    display: flex;
+    justify-content: space-evenly;
+    background: lightslategray;
+    padding: 30px 70px;
+    border-radius: 30px;
+}
+#hero{
+    background: cadetblue;
+    min-height: 100vh;
+}
